@@ -1,0 +1,21 @@
+node_modules/
+dist/
+data/
+shots/
+release/
+.edge-profile*
+*.log
+.DS_Store
+
+# Android 构建产物与本地环境
+android/.gradle/
+android/build/
+android/app/build/
+android/local.properties
+android/app/src/main/assets/public/
+*.keystore
+# 签名私钥与密码不进仓库（README 里说明了如何生成自己的证书）
+*.keystore
+*.jks
+keystore.properties
+ui-dump.xml

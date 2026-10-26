@@ -1,0 +1,17 @@
+services:
+  app:
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile
+    ports:
+      - "8787:8787"
+    volumes:
+      - app-data:/app/data
+    environment:
+      - JWT_SECRET=${JWT_SECRET:-change-me-in-production}
+      - OBD_HOST=${OBD_HOST:-192.168.0.10}
+      - OBD_PORT=${OBD_PORT:-35000}
+    restart: unless-stopped
+
+volumes:
+  app-data:

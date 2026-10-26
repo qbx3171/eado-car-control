@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  允许明文 HTTP。
+  原因：本项目的后端跑在局域网电脑上（http://192.168.x.x:8787），
+  Android 9 起默认禁止明文流量，不放开这个开关，App 里所有请求都会直接失败。
+  正式上线换成 https + 域名后，应把 cleartextTrafficPermitted 改回 false。
+-->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="true">
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+</network-security-config>

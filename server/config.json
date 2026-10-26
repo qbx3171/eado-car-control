@@ -1,0 +1,14 @@
+{
+  "port": 8787,
+  "jwtSecret": "eado-dev-secret-change-me-in-production",
+  "tokenTtlSec": 43200,
+  "commandTtlMs": 30000,
+  "offlineThresholdMs": 90000,
+  "mock": {
+    "ackDelayMinMs": 700,
+    "ackDelayMaxMs": 2200,
+    "failRate": 0.04,
+    "tickMs": 3000
+  },
+  "dbFile": "data/eado.db"
+}
